@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
+    <script src="../../js/jquery-3.7.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Bai3.css">
+</head>
+<body>
+    <div class="container">
+        <table class="table" id="myTable" border="1">
+            <tr>
+                <td>Tên</td>
+                <td>Tên Tài Khoản</td>
+                <td>Mật khẩu</td>
+                <td>Ngày Sinh</td>
+                <td>Điện thọi</td>
+                <td>Địa chỉ</td>
+                <td>Email</td>
+                <td>Sở thích</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var ten = localStorage.getItem("ten");
+              var login = localStorage.getItem("login");
+              var mk = localStorage.getItem("mk");
+              var ngaySinh = localStorage.getItem("ngaySinh");
+              var dienThoai = localStorage.getItem("dienThoai");
+              var diaChi = localStorage.getItem("diaChi");
+              var email = localStorage.getItem("email");
+              var soThich = localStorage.getItem("soThich");
+            let newTB = "<tr><td>" + ten + "</td><td>" + login + "</td><td>" +
+                        mk + "</td><td>" + ngaySinh + "</td><td>" + dienThoai
+                            + "</td><td>" + diaChi + "</td><td>" + email
+                                + "</td><td>" + soThich + "</td></tr>";
+            $('#myTable').append(newTB);
+        });
+    </script>
+</body>
+</html>
